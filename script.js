@@ -12,7 +12,7 @@
 //Come faccio a sapere se un numero è divisibile per?
 //Quando il risultato della divisione di numero / 3 o / 5 è un numero intero
 
-let numero
+let numero;
 let risultatoDivisoTre = (numero/3);
 let risultatoDivisoCinque = (numero/5);
 
@@ -20,11 +20,14 @@ let risultatoDivisoCinque = (numero/5);
 
 for (let numero = 1; numero <= 100; numero = numero +1 ){
     
-    let risultatoDivisoTre = (numero/3);
-    let risultatoDivisoCinque = (numero/5);
+    let risultatoDivisoTre = (numero/3)
+    let risultatoDivisoCinque = (numero/5)
 
-    if (risultatoDivisoTre == 3){console.log(numero + "Fizz")}
-      else if (risultatoDivisoCinque == 5){console.log(numero + "Buzz")}
-       else if (risultatoDivisoCinque && risultatoDivisoTre == 15) { console.log (numero + "FizzBuzz")}
-       else if (risultatoDivisoCinque && risultatoDivisoTre != 15 , 5 , 3){console.log(numero)}
+    if (Number.isInteger(risultatoDivisoTre)){console.log(numero + " Fizz ")}
+
+      else if (Number.isInteger(risultatoDivisoCinque )){console.log(numero + " Buzz ")}
+
+       else if (Number.isInteger(risultatoDivisoCinque) && Number.isInteger(risultatoDivisoTre)) { console.log (numero + " FizzBuzz ")}
+
+       else if (!Number.isInteger(risultatoDivisoCinque) && !Number.isInteger(risultatoDivisoTre)) { console.log (numero)}
 }
